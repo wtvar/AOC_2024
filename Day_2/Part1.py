@@ -1,9 +1,6 @@
 file_name = "input.txt"
 
-left_list = []
-right_list = []
 
-        
         
 def check_higher(list):
 	current = 0
@@ -30,7 +27,7 @@ def check_lower(list):
 	higher = None
 	for val in list:
 		current = int(val)
-		if prior == float:
+		if prior == float("inf"):
 			prior = current
 			pass
 		elif current < prior and ((prior - current) <= 3):
@@ -58,3 +55,11 @@ with open(file_name) as text:
         	
     print(f'final safe: {safe}')
 		
+        
+
+
+
+"""test = ['72 73 75 77 78 80 81']
+line_list = test[0].split(" ")
+print(check_lower(line_list))
+"""
